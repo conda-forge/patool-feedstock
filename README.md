@@ -16,7 +16,7 @@ Current build status
 
 [![Linux](https://img.shields.io/circleci/project/github/conda-forge/patool-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/patool-feedstock)
 [![OSX](https://img.shields.io/travis/conda-forge/patool-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/patool-feedstock)
-![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/patool-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/patool-feedstock/branch/master)
 
 Current release info
 ====================
