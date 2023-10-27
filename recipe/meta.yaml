@@ -1,4 +1,4 @@
-{% set version = "1.12" %}
+{% set version = "1.14.1" %}
 
 package:
   name: patool
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/patool/patool-{{ version }}.tar.gz
-  sha256: e3180cf8bfe13bedbcf6f5628452fca0c2c84a3b5ae8c2d3f55720ea04cb1097
+  sha256: 9a6e41576581a15784e58a83b43ba54fee89884c10446224c948d23fce9e666b
 
 build:
-  number: 1007
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"  # [win]
 
 requirements:
