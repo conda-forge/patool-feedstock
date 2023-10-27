@@ -1,33 +1,37 @@
+{% set name = "patool" %}
 {% set version = "1.14.0" %}
 
 package:
-  name: patool
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/patool/patool-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
   sha256: ea93e13ce75922617482572b3a59c7497729c5bc1f3ef564c2a6fd0ccb35e378
 
 build:
+  entry_points:
+    - patool = patoolib.cli:main_cli
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"  # [win]
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.9
+    - setuptools
     - pip
   run:
-    - python
+    - python >=3.9
 
 test:
   imports:
     - patoolib
-    - patoolib.programs
   commands:
+    - pip check
     - patool --help
+  requires:
+    - pip
 
 about:
   home: http://wummel.github.io/patool/
