@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - setuptools
     - pip
   run:
-    - python >=3.9
+    - python >=3.10
 
 test:
   imports:
@@ -35,10 +35,10 @@ test:
 
 about:
   home: http://wummel.github.io/patool/
-  license: GPL-3.0
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: COPYING
-  summary: 'portable archive file manager'
+  summary: patool is a portable command line archive file manager
   dev_url: https://github.com/wummel/patool
 
 extra:
