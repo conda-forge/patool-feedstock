@@ -5,9 +5,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/patool-feedstoc
 
 Home: http://wummel.github.io/patool/
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
-Summary: portable archive file manager
+Summary: patool is a portable command line archive file manager
 
 Development: https://github.com/wummel/patool
 
