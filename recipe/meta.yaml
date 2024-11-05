@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
   sha256: 08a79e570b4ed7298b0901717a4fb5aee20299f0ec70e3c44fa431699e0badb3
 
 build:
