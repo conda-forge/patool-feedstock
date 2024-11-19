@@ -1,5 +1,6 @@
+{% set python_min = "3.10" %}
 {% set name = "patool" %}
-{% set version = "3.0.3" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,22 +8,22 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
-  sha256: 08a79e570b4ed7298b0901717a4fb5aee20299f0ec70e3c44fa431699e0badb3
+  sha256: 417ed1ff7b9c979ce8a10114ed9bc280b08e3af3df3072e761303a3e00aaba04
 
 build:
   entry_points:
     - patool = patoolib.cli:main_cli
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
   number: 0
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +32,7 @@ test:
     - pip check
     - patool --help
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
