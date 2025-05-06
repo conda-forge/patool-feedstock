@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "patool" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
-  sha256: c953f651ae1e888d1ae483b67b172a783121e83f12a94f735a147bdca8f5d3a4
+  sha256: 41f7ee21be337a5baf07b2cb4796e9d94397ab741d2379c622f98fc001099802
 
 build:
   entry_points:
@@ -21,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - setuptools
+    - setuptools_reproducible
     - pip
   run:
     - python >={{ python_min }}
