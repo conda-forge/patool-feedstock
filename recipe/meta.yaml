@@ -1,6 +1,6 @@
 {% set python_min = "3.11" %}
 {% set name = "patool" %}
-{% set version = "4.0.4" %}
+{% set version = "4.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/patool-{{ version }}.tar.gz
-  sha256: 2f23e2d6513193c28061425d6ddf1f56561ae4003cbe2007fc6d051df273e09a
+  sha256: 1c8bbbbe1f421181bf7055ada975befb024c1677449e9d36f42bb45ac69f8b4c
 
 build:
   entry_points:
