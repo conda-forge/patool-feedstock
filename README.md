@@ -3,11 +3,11 @@ About patool-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/patool-feedstock/blob/main/LICENSE.txt)
 
-Home: http://wummel.github.io/patool/
+Home: https://github.com/wummel/patool
 
-Package license: GPL-3.0-or-later
+Package license: GPL-3.0-only
 
-Summary: patool is a portable command line archive file manager
+Summary: portable archive file manager
 
 Development: https://github.com/wummel/patool
 
@@ -18,7 +18,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/patool-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/patool-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -40,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `patool` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install patool
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install patool
 ```
 
-It is possible to list all of the versions of `patool` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add patool
+# for installing globally
+pixi global install patool
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `patool` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search patool --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search patool --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search patool --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -76,6 +120,8 @@ mamba repoquery whoneeds patool --channel conda-forge
 # List dependencies of `patool`:
 mamba repoquery depends patool --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
