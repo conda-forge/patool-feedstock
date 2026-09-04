@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "4.0.6"
+  version: "4.0.7"
 
 package:
   name: patool
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/patool/patool-${{ version }}.tar.gz
-  sha256: 5316fb036322bef8c3a73f5d2cbc31fe0d8080b57b599213cdfefba7d488fd9f
+  sha256: 08dcb019997f55aa730a873185aeddbb397e2be757157769721942784cb4a97f
 
 build:
   number: 0
