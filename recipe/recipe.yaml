@@ -1,6 +1,7 @@
 schema_version: 1
 
 context:
+  python_min: "3.12"
   version: "4.1.0"
 
 package:
