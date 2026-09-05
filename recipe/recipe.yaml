@@ -1,7 +1,8 @@
 schema_version: 1
 
 context:
-  version: "4.0.7"
+  python_min: "3.12"
+  version: "4.1.0"
 
 package:
   name: patool
@@ -9,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/patool/patool-${{ version }}.tar.gz
-  sha256: 08dcb019997f55aa730a873185aeddbb397e2be757157769721942784cb4a97f
+  sha256: 54c669b2af0f5e46d59a53f02ca4f83d53b3a7a25d50e97778582da7cea65daf
 
 build:
   number: 0
@@ -22,6 +23,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
+    - setuptools
     - setuptools_reproducible >=0.1
     - pip
   run:
